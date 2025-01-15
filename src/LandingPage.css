@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+.landing-page {
+  font-family: 'Open Sans', sans-serif;
+  padding: 10px;
+  text-align: center;
+  background-image: url('./assets/background.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  color: white;
+  overflow-x: hidden;
+}
+
+.header {
+  position: relative;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+.title img {
+  width: 80%;
+  max-width: 250px;
+  height: auto;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.content {
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+}
+
+.feature-image {
+  width: 80%;
+  max-width: 5000px;
+  height: auto !important;
+  margin-top: 10px;
+}
+
+.promo-image {
+  width: 85%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.benefit-image {
+  width: 85%;
+  height: auto;
+}
+
+.footer {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.footer h3 {
+  margin: 5px 0;
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.footer p {
+  margin: 5px 0;
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.contact {
+  height: auto;
+  margin: 5px;
+}
+
+.footer-image {
+  padding-top: 40px;
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+
+
+.benefits h3,
+.requirements h3,
+.footer h3 {
+  color: #dc7c34;
+  font-size: 2rem;
+}
+
+.benefits h3,
+.requirements h3,
+.tabungan-text {
+  padding-left: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.image-animate {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.image-animate-delay-1 {
+  animation-delay: 0.5s;
+}
+
+.image-animate-delay-2 {
+  animation-delay: 1s;
+}
+
+.image-animate-delay-3 {
+  animation-delay: 1.5s;
+}
+
+.image-animate-delay-4 {
+  animation-delay: 2s;
+}
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.benefits h3,
+.requirements h3 {
+  color: #dc7c34;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.benefits ul,
+.requirements ul {
+  margin-top: 0;
+  padding-left: 40px;
+}
+
+.clickable-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 70px;
+  z-index: 10;
+  background: transparent;
+}
+
+@keyframes fadeInButton {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.register-button {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  color: white;
+  background-color: #dc7c34;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  opacity: 0;
+  animation: fadeInButton 0.5s ease-out forwards;
+}
+
+.register-button:hover {
+  background-color: #b85e29;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .clickable-area {
+    width: 420px;
+    height: 100px;
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+  }
+
+  .title {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .title img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .images {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+  }
+
+  .content {
+    flex: 1;
+    text-align: left;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+  }
+
+  .feature-image {
+    max-width: 600px !important;
+    height: auto;
+  }
+
+  .benefit-image {
+    max-width: 350px;
+  }
+
+  .promo-image {
+    margin-top: 60px;
+    max-width: 450px;
+  }
+
+  .logo {
+    width: 100%;
+    max-width: none;
+  }
+
+  .register-button {
+    margin: 30px 0 0 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
